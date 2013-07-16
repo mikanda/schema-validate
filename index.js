@@ -37,7 +37,8 @@ function SchemaValidate() {
  * Validator function called with the model class as context.
  *
  * @param {Object} the model instance
- * @this {Model} the model class to work with
+ *
+ * @api private
  */
 
 SchemaValidate.prototype.validate = function(model){
