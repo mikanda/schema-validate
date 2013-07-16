@@ -1,0 +1,22 @@
+{
+  "name": "schema-validate",
+  "repo": "mikanda/schema-validate",
+  "description": "Validator to validate a model against a json schema.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "mikanda/JSV": "*",
+    "component/each": "0.0.1",
+    "component/bind": "0.0.1"
+  },
+  "development": {
+    "component/model": "*",
+    "visionmedia/mocha": "*",
+    "chaijs/chai": "*"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}

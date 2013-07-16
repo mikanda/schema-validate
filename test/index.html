@@ -1,0 +1,19 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title></title>
+    <link href="../build/build.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script src="../build/build.js"></script>
+    <script>
+      require('mocha');
+      mocha.setup('bdd');
+    </script>
+    <script src="schema-validate.js"></script>
+    <script>
+      mocha.run();
+    </script>
+  </body>
+</html>
