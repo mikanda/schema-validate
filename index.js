@@ -28,22 +28,21 @@ function SchemaValidate() {
   // return real validator function
 
   return function(Model){
-    self.model = Model;
-    Model.validate(bind(self, self.validate));
+    Model.validate(bind(self, self.validate, Model));
   };
 }
 
 /**
  * Validator function called with the model class as context.
  *
- * @param {Object} the model instance
+ * @param {Model} Model the class
+ * @param {Object} model the instance
  *
  * @api private
  */
 
-SchemaValidate.prototype.validate = function(model){
-  var Model = this.model
-    , env = this.env;
+SchemaValidate.prototype.validate = function(Model, model){
+  var env = this.env;
 
   // check each attribute with the associated schema
 
