@@ -3,7 +3,11 @@
   "repo": "mikanda/schema-validate",
   "description": "Validator to validate a model against a json schema.",
   "version": "0.0.1",
-  "keywords": [],
+  "keywords": [
+    "json",
+    "schema",
+    "model"
+  ],
   "dependencies": {
     "mikanda/JSV": "*",
     "component/each": "0.0.1",
