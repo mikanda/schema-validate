@@ -37,7 +37,7 @@ describe('SchemaValidate', function(){
     user.validate();
     user.errors.length.should.equal(1);
     error = user.errors[0];
-    error.attr.should.equal('key.value');
+    error.attr.should.equal('key');
     message = error.message;
     message.attribute.should.equal('required');
     message.details.should.equal(true);

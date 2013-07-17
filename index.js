@@ -48,7 +48,7 @@ SchemaValidate.prototype.validate = function(Model, model){
 
   each(Model.attrs, function(attr, schema){
     var value = model[attr]()
-    , report;
+      , report;
     report = env.validate(value, schema);
     registerErrors(model, attr, report);
   });
@@ -66,20 +66,9 @@ SchemaValidate.prototype.validate = function(Model, model){
 
 function registerErrors(model, attr, report) {
   each(report.errors, function(error){
-    var uri = error.uri
-      , path
-      , prop;
-
-    // parse the uri to get the error key
-
-    path = uri.split('#')[1];
-
-    // turn the path into dot notation
-
-    prop = attr + path.replace(/\//g, '.');
 
     // register the error
 
-    model.error(prop, error);
+    model.error(attr, error);
   });
 }
